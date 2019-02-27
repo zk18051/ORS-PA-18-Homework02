@@ -1,17 +1,13 @@
-"""
-===================   TASK 2   ====================
-* Name: Convert Kilometers To Miles
-*
-* Write a script that will convert kilometers to
-* miles. Script should ask user for input and check
-* if user input is valid. If not, the script should
-* quit immediately with appropriate message.
-*
-*
-* Note: Please describe in details possible cases
-* in which your solution might not work.
-*
-* Note: You may use `can_string_be_float` function
-* from previous task to validate user input.
-===================================================
-"""
+print('Convert Kilometers To Miles')
+def main():
+    user_value = input('Enter kilometers:')
+    try:
+        float(user_value)
+        print(float(user_value),'km')
+    except:
+        print(user_value, 'is not a number. Try again.')
+        return main()
+    user_miles = float(user_value) * 0.62137
+    print(user_value, 'km is', user_miles, 'miles')
+
+main()
